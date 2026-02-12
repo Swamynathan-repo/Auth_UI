@@ -1,0 +1,18 @@
+{
+    "contacts":[
+        {
+            "id":"1",
+            "name":"Ram",
+            "email":"contact123@gmail.com",
+            "userId":"1"
+        }
+    ],
+    "users":[
+        {
+           "id":"1",
+            "name":"Ram",
+            "email":"user123@gmail.com",
+            "password":"12345" 
+        }
+    ]
+}
