@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import React from 'react'
 import LogoutBtn from './LogoutBtn';
+import { getSession } from '../_lib/sessions';
 
-const Navbar = () => {
-    const session=false;
+const Navbar = async () => {
+    const session= await getSession();
   return (
     <nav className='shadow-sm'>
         <div className='container mx-auto p-4 flex justify-between items-center'>
             <Link href="/" className='text-xl text-blue-600'>Contact Manager</Link>
             <div className='flex items-center space-x-4'>
-                { session ? (
+                { session?(
                     <> 
                     <Link href='/contact' className='hover:text-blue-600 mr-8'>Contact</Link>
                     <LogoutBtn/>
